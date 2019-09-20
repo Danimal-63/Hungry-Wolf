@@ -38,16 +38,21 @@ function handleShipAnimation() {
 }
 //creats and object of size hieght 20 and length 20 and NEW_OBJECT.x,NEW_OBJECT.y,20,20
 function RenderNewObject(context) {
-context.fillRect(NEW_OBJECT.x,NEW_OBJECT.y,20,20);
+context.fillRect(NEW_OBJECT.x,NEW_OBJECT.y,80,80);
+
+  context.fillRect(OBSTACLE.x, OBSTACLE.y,20, 100);
+  context.fillRect (OBSTACLE_BOTTOM.x, OBSTACLE_BOTTOM.y, 20,100);
 }
 // moves the object in a diagonal resetting when it hits the border at the top left corner
 function HandleNewObjectMovement() {
-  NEW_OBJECT.x+=2;
-  NEW_OBJECT.y+=1;
+  OBSTACLE.x-=1;
+  OBSTACLE_BOTTOM.x-=1;
   if (NEW_OBJECT.x>GAME.canvas.width) {
-    NEW_OBJECT.x=0;
+    OBSTACLE.x=0;
+    OBSTACLE_BOTTOM.x=0;
   }else if (NEW_OBJECT.y>GAME.canvas.height) {
-    NEW_OBJECT.y=0;
+    OBSTACLE.y=0;
+    OBSTACLE_BOTTOM.y=0;
   }
 }
 
