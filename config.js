@@ -17,6 +17,14 @@ var SPACE_SHIP = {
 };
 
 var NEW_OBJECT = {
-  x : 0,
+  x : 300,
+  y : 150
+};
+var OBSTACLE = {
+  x : 580,
   y : 0
 };
+var OBSTACLE_BOTTOM = {
+  x : 580,
+  y : 200
+}
